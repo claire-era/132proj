@@ -4,12 +4,12 @@ use ieee.numeric_std.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
  
-entity example_file_io_tb is
+entity main is
  
-end example_file_io_tb;
+end main;
  
  
-architecture behave of example_file_io_tb is
+architecture behave of main is
 
   -----------------------------------------------------------------------------
   -- Testbench Internal Signals
