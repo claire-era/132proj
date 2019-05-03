@@ -19,9 +19,10 @@ architecture behave of main is
   constant c_WIDTH : natural := 5;
   type INST_ARR is array (0 to 14) of std_logic_vector(18 downto 0);
   type REG_ARR is array (0 to 31) of std_logic_vector(5 downto 0);
-  -- SIGNALS
+  -- Set this signals to 0 or 1 according to several conditions
   signal sf, ovf, uf, zf : std_logic;
   signal pc : std_logic_vector(3 downto 1);
+  signal f, d, x, m, w : std_logic; 
 
 
   
@@ -52,6 +53,7 @@ begin
     end loop;    
     file_close(file_VECTORS);
 
+    ------------------------------------------------
     --index := 0;
     --while index < 4 loop
     --  write(v_OLINE, inst_stack(index));
@@ -60,6 +62,10 @@ begin
     --end loop;
 
     --file_close(file_RESULTS);
+    -------------------------------------------------
+
+    -- PERFORM FDE by
+
 
     wait;
   end process;
