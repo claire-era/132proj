@@ -18,17 +18,23 @@ architecture behave of main is
   file file_RESULTS : text;
   constant c_WIDTH : natural := 5;
   type INST_ARR is array (0 to 14) of std_logic_vector(18 downto 0);
-  -- REGISTER ARRAY
-  -- FLAG REGISTER ARRAY
+  type REG_ARR is array (0 to 31) of std_logic_vector(5 downto 0);
   -- SIGNALS
+  signal sf, ovf, uf, zf : std_logic;
+  signal pc : std_logic_vector(3 downto 1);
+
+
   
 
 begin
   process
     variable v_ILINE     : line;
     variable v_OLINE     : line;
-    variable inst : std_logic_vector(18 downto 0);
-    variable inst_stack : INST_ARR;
+    variable inst : std_logic_vector(18 downto 0); --instruction
+    variable reg : std_logic_vector(5 downto 0); --register
+    variable regi_arr : REG_ARR; -- array for register values
+    variable reg_flag_arr : REG_ARR; -- array for register flag values
+    variable inst_stack : INST_ARR; -- array for instruction stack
     variable index : integer;
 
   begin
