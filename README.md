@@ -9,6 +9,10 @@ Update as of May 3, 2019: 2:15 AM
 
 Progress: reading of file contents to system.
 
+Dependecies:
+ - GHDL 0.36-dev (20181129-161-g3c30e3b4) or older
+
+
 To execute:
 1. Open terminal and move to the directory of 'input2.txt' input file and 'example_file_io_tb.vhdl'.
 2. Perform the following:
