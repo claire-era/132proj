@@ -11,3 +11,15 @@ To execute:
 	-a --ieee=synopsys main.vhdl
  	-e --ieee=synopsys main
  	-r --ieee=synopsys main --vcd=output.vcd
+
+
+
+Notes:
+
+- separate into operand - dest - src - flag - src
+- apply fde using component based.
+- apply structural inside main
+- apply behavioral per component
+
+- aim: run at least 1 instruction
+- in decode: use flags. 
